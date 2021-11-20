@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Wireframe</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/b2a2059d64.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="weather-app">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="search-area">
+              <form id="city-submit">
+                <div class="form-group">
+                  <input
+                    id="city-input"
+                    type="text"
+                    class="form-control"
+                    placeholder="Search for a city"
+                  />
+                </div>
+                <div class="form-check"></div>
+                <button type="submit" class="btn btn-light">Search</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-6">
+            <h1 id="city"></h1>
+            <h2><span id="temperature"></span>ºC</h2>
+            <ul>
+              <li id="currentDate"></li>
+              <li id="description"></li>
+              <li>Humidity: <span id="humidity">%</span></li>
+              <li>Windspeed: <span id="wind"></span>km/h</li>
+            </ul>
+          </div>
+        </div>
+        <p>Check the upcoming days.</p>
+        <hr />
+        <div class="next-days">
+          <div class="row">
+            <div class="col-2">
+              <strong> Mon</strong>
+              <br />
+              <br />
+              <i class="fas fa-bolt"></i>
+              <br />
+              <br />
+              <strong> 18ºC</strong>
+            </div>
+            <div class="col-2">
+              <strong> Tues</strong>
+              <br />
+              <br />
+              <i class="fas fa-cloud"></i>
+              <br />
+              <br />
+              <strong> 18ºC</strong>
+            </div>
+            <div class="col-2">
+              <strong> Wed</strong>
+              <br />
+              <br />
+              <i class="fas fa-cloud-showers-heavy"></i>
+              <br />
+              <br />
+              <strong> 18ºC</strong>
+            </div>
+            <div class="col-2">
+              <strong> Thrus</strong>
+              <br />
+              <br />
+              <i class="fas fa-cloud-sun"></i>
+              <br />
+              <br />
+              <strong> 18ºC</strong>
+            </div>
+            <div class="col-2">
+              <strong> Fri</strong>
+              <br />
+              <br />
+              <i class="fas fa-sun"></i>
+              <br />
+              <br />
+              <strong> 18ºC</strong>
+            </div>
+            <div class="col-2">
+              <strong> Sat</strong>
+              <br />
+              <br />
+              <i class="fas fa-cloud"></i>
+              <br />
+              <br />
+              <strong> 18ºC</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>Coded by Marta Moreira</footer>
+    <script src="src/index.js"></script>
+  </body>
+</html>
