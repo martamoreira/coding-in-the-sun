@@ -8,6 +8,7 @@ ul {
 ul {
   list-style-type: none;
   padding-inline-start: 0;
+  font-size: 15px;
 }
 p {
   font-style: italic;
