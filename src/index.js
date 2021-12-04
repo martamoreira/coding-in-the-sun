@@ -21,7 +21,8 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -53,6 +54,14 @@ let dateElement = document.querySelector("#currentDate");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "4dda08779cb192c624730c82ed15f8aa";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric
+`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -64,6 +73,8 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -82,4 +93,3 @@ let cityForm = document.querySelector("#city-submit");
 cityForm.addEventListener("submit", handleSubmit);
 
 search("Viseu");
-displayForecast();
