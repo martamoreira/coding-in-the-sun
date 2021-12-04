@@ -38,6 +38,14 @@ footer {
   font-family: "Roboto Mono", monospace;
   font-size: 10px;
 }
+.weather-forecast-temperature-min {
+  font-weight: bold;
+}
+.weather-forecast-temperature-min {
+  font-weight: lighter;
+  color: grey;
+  opacity: 0.5;
+}
 
 .next-days {
   font-weight: 200;
